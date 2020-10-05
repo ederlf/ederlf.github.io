@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Eder L. Fernandes</title>
+    <link>http://www.eecs.qmul.ac.uk/~eleao/home/</link>
+    <description>Recent content in Homes on Eder L. Fernandes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 20 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.eecs.qmul.ac.uk/~eleao/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/home/about/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/home/about/</guid>
+      <description>Biography I am a Research Assistant and PhD candidate at the Networks group of Queen Mary University of London&amp;rsquo;s School of Electronic Engineering and Computer Science. My research interest includes Software Defined Networking, network simulation and inter-domain routing. I have a developer background, having worked in Open Source projects such as the implementation of OpenFlow 1.3, Route Flow and in the development of the winner OpenFlow driver on a competition organized by the Open Networking Foundation.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0100</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/home/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

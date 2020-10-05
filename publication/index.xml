@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Eder L. Fernandes</title>
+    <link>http://www.eecs.qmul.ac.uk/~eleao/publication/</link>
+    <description>Recent content in Publications on Eder L. Fernandes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.eecs.qmul.ac.uk/~eleao/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rethinking IXP’s architecture in the age of SDN</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/umbrella-jsac/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/umbrella-jsac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An SDN-inspired Model for Faster Network Experimentation</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/sigsimpads18/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/sigsimpads18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploring the Deployment and Utilisation of Web Infrastructure in Africa.</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/webinfraafrica/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/webinfraafrica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Umbrella: a deployable SDN-enabled IXP Switching Fabric</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/sosr18-poster/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/sosr18-poster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ENDEAVOUR: A Scalable SDN Architecture For Real-World IXPs</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/endeavour-jsac/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/endeavour-jsac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SDN-enabled Traffic Engineering and Advanced Blackholing at IXPs</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/sosr17-demo/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/sosr17-demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Horse: towards an SDN traffic dynamics simulator for large scale networks</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/horse/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/horse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Switch 1.3: An experimenter-friendy OpenFlow implementation</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/mscdissertation/</link>
+      <pubDate>Sun, 01 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/mscdissertation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenFlow 1.3 software switch</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/softswitch/</link>
+      <pubDate>Thu, 01 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/softswitch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Building upon RouteFlow: a SDN development experience</title>
+      <link>http://www.eecs.qmul.ac.uk/~eleao/publication/routeflow/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.eecs.qmul.ac.uk/~eleao/publication/routeflow/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
