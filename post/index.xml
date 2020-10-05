@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Eder L. Fernandes</title>
-    <link>http://www.eecs.qmul.ac.uk/~eleao/post/</link>
+    <link>https://ederlf.github.io/post/</link>
     <description>Recent content in Posts on Eder L. Fernandes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.eecs.qmul.ac.uk/~eleao/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ederlf.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parsing the RTA_MULTIPATH attribute from Rtnetlink</title>
-      <link>http://www.eecs.qmul.ac.uk/~eleao/post/netlink-multipath/</link>
+      <link>https://ederlf.github.io/post/netlink-multipath/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.eecs.qmul.ac.uk/~eleao/post/netlink-multipath/</guid>
+      <guid>https://ederlf.github.io/post/netlink-multipath/</guid>
       <description>I am developing an application that relies on the detection of changes to the Linux kernel route tables. For the job, one can use Rtnetlink for reading and modification of the routing tables. For example, the RTM_NEWROUTE message can be used to add a new route or read from the netlink socket, indicating a new route was added to the route table.
 Netlink messages are usually composed of attributes which contain the information associated to the message type.</description>
     </item>
