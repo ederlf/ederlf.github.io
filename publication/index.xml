@@ -13,6 +13,24 @@
     
     
     <item>
+      <title>The Road to BOFUSS: The Basic OpenFlow User-space Software Switch</title>
+      <link>https://ederlf.website/publication/bofuss/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ederlf.website/publication/bofuss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Empirical Study of the Cost of DNS-over-HTTPS</title>
+      <link>https://ederlf.website/publication/dns-imc/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ederlf.website/publication/dns-imc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Rethinking IXP’s architecture in the age of SDN</title>
       <link>https://ederlf.website/publication/umbrella-jsac/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
