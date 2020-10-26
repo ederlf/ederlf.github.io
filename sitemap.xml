@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://ederlf.website/post/notes-on-udp/</loc>
+      <lastmod>2020-10-26T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://ederlf.website/publication/bofuss/</loc>
       <lastmod>2020-05-11T00:00:00+00:00</lastmod>
     </url>
@@ -226,8 +235,38 @@
     
     <url>
     
+      <loc>https://ederlf.website/tags/networks/</loc>
+      <lastmod>2020-10-26T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://ederlf.website/categories/networks/</loc>
+      <lastmod>2020-10-26T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://ederlf.website/categories/programming/</loc>
       <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://ederlf.website/tags/protocols/</loc>
+      <lastmod>2020-10-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -268,6 +307,16 @@
     
       <loc>https://ederlf.website/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://ederlf.website/tags/udp/</loc>
+      <lastmod>2020-10-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

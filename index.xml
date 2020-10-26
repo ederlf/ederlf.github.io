@@ -11,6 +11,87 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Notes on UDP</title>
+      <link>https://ederlf.website/post/notes-on-udp/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ederlf.website/post/notes-on-udp/</guid>
+      <description>
+
+&lt;h1 id=&#34;notes-on-udp&#34;&gt;Notes on UDP&lt;/h1&gt;
+
+&lt;p&gt;UDP is commonly the target of jokes about how unreliable it is a transport protocol.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;I could tell you a UDP joke. But I&amp;rsquo;m not sure you&amp;rsquo;ll get it.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Indeed, the protocol is very simple and does not provide guarantees like TCP. Applications on top of UDP must implement functionalities such as error correction, flow and congestion control, sequencing, and duplication if they require a reliable transfer. So that is all?&lt;/p&gt;
+
+&lt;p&gt;Not really. After revisiting the UDP chapter in the first volume of &lt;a href=&#34;https://www.pearson.com/us/higher-education/program/Fall-TCP-IP-Illustrated-Volume-1-The-Protocols-2nd-Edition/PGM69698.html&#34; target=&#34;_blank&#34;&gt;TCP/IP Illustrated&lt;/a&gt;, I have found some details worth pinning in a post.&lt;/p&gt;
+
+&lt;h2 id=&#34;udp-basics&#34;&gt;UDP basics&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;IP protocol number: &lt;strong&gt;17&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;UDP header size is always: &lt;strong&gt;8 bytes&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;All fields of the UDP header are &lt;strong&gt;2 bytes&lt;/strong&gt; long.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+-----------------------------------------------------------------
+|          Source Port          |        Destination Port       |
+-----------------------------------------------------------------
+|             Length            |            Checksum           |
+-----------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;some-facts-about-the-header&#34;&gt;Some facts about the header&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The source port is optional. I can be &lt;strong&gt;set to 0&lt;/strong&gt; if the sender never requires a reply.&lt;/li&gt;
+&lt;li&gt;The length field is the size of the header plus the payload. &lt;strong&gt;This field is redundant&lt;/strong&gt;, because the IPv4 header already contains the total datagram size.&lt;/li&gt;
+&lt;li&gt;A datagram with &lt;strong&gt;0 bytes of data&lt;/strong&gt; is acceptable (but rare)&lt;/li&gt;
+&lt;li&gt;The checksum field is &lt;strong&gt;optional with IPv4&lt;/strong&gt;, but mandatory by &lt;a href=&#34;https://tools.ietf.org/html/rfc1122&#34; target=&#34;_blank&#34;&gt;RFC1122&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;checksum&#34;&gt;Checksum&lt;/h2&gt;
+
+&lt;p&gt;UDP is capable of providing error detection using the checksum field.&lt;/p&gt;
+
+&lt;h3 id=&#34;some-facts-about-the-checksum&#34;&gt;Some facts about the checksum&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;UDP pads odd-lenght datagrams with a 0 byte&lt;/strong&gt; just for the computation and verifications&lt;/li&gt;
+&lt;li&gt;Similarly to TCP, UDP &lt;strong&gt;uses a pseudo-header&lt;/strong&gt; derived with fields from the IPv4 or IPv6 headers.
+
+&lt;ul&gt;
+&lt;li&gt;The pseudo-header is &lt;strong&gt;40 bytes&lt;/strong&gt; long&lt;/li&gt;
+&lt;li&gt;The pseudo-header includes the &lt;strong&gt;IP source and destination plus the protocol/ nextheader field&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;There is a &lt;strong&gt;0 padding before the protocol number&lt;/strong&gt; in the pseudo-header&lt;/li&gt;
+&lt;li&gt;Using IP layer fields lets the receiver &lt;strong&gt;verify if the datagram arrived at the correct destination&lt;/strong&gt; (in a theoretical case that IP accepts wrongly accepts a packet to a different destination.)&lt;/li&gt;
+&lt;li&gt;The pseudo-header is completed with the &lt;strong&gt;full UDP header and the data&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;If the checksum is &lt;strong&gt;0x0000 on the receiver side&lt;/strong&gt;, it indicates that the checksum was not computed.&lt;/li&gt;
+&lt;li&gt;The UDP datagram is &lt;strong&gt;discarded silently&lt;/strong&gt; in the case of errors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When the packet goes through a &lt;strong&gt;NAT&lt;/strong&gt;, the &lt;strong&gt;checksum is recalculated&lt;/strong&gt; because the pseudo-header will have a different source IP.&lt;/p&gt;
+
+&lt;h2 id=&#34;udp-and-ipv6&#34;&gt;UDP and IPV6&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The checksum is &lt;strong&gt;mandatory for IPv6&lt;/strong&gt;, because it does not calculate a checksum like IPv4.&lt;/li&gt;
+&lt;li&gt;IPv6 supports &lt;strong&gt;jumbograms&lt;/strong&gt; that are larger than &lt;strong&gt;65535 bytes&lt;/strong&gt;. This value is larger than the Length field. When sending a jumbogram using UDP, the &lt;strong&gt;Length field is 0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The size of the UDP datagram for &lt;strong&gt;jumbograms&lt;/strong&gt; is calculated using the &lt;strong&gt;Jumbo Payload Option&lt;/strong&gt; (gives the length of the IPv6 payload)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The Road to BOFUSS: The Basic OpenFlow User-space Software Switch</title>
       <link>https://ederlf.website/publication/bofuss/</link>
       <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
