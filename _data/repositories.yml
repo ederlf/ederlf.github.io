@@ -1,12 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - ederlf
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - CPqD/ofsoftswitch13
+  - OpenNetworkingFoundation/libfluid
+  - ederlf/horse
+  - ederlf/RouteFlow
+  - ederlf/umbrella-anyhop
+  - ederlf/libcfluid_base
+  - ederlf/hedera-ryu
+  - ederlf/advent-of-code
