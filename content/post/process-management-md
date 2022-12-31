@@ -1,0 +1,84 @@
+# Processes and Process Manange
+
+> A process is an instance of an executing program.
+
+A process requires: 
+    - A state of execution -> program counter, stack pointer
+    - Parts and temporary holding area -> data, registers, state in memory
+    - May require some special hardware -> OS manages I/O devices
+
+Recall:
+    > OS manages hardware on behalf of applications
+
+Once a process is launched is becomes an active entity.  
+e.g., instances of a text editor.
+
+A process represents the execution state of an application.
+
+## What does a process look like?
+
+The process encodes all the data related to the running application:
+    stack -> grows and shrinks during the execution. LIFO, but data can be access using offsets.
+    heap -> dynamically created. It may not be a contiguous space.
+    data
+    text -> static, the code available
+
+The components of a process are distributed in an address space encapsulated by the OS.
+
+## Process address space
+
+    Address space is an "in memory" representation of a process
+
+    The address space is virtual because they do not correspond to actual locations of the physical memory.
+
+    The OS memory management maintains a mapping between the virtual address space and the physical addresses. This mapping decouples the layout of the memory and allow easier management of the physical memory.
+
+    When the process requests memory allocation, the OS creates a mapping between a provided virtual address and a physical address.
+
+    The OS stores the mapping into page tables.
+
+## Address Space and Memory Management
+
+    Not all processes require the entire address space.
+
+    The OS dynamically decides which portion of the address space will be present in physical memory. Some portions of the address space might be swapped into disk.
+
+    > Virtual address space can have the same range but refer to different physical memory locations.
+
+
+## Process execution space
+
+> How does the OS know what a process is doing?
+
+Background:
+    Application are compiled and a binary is produced
+    A binary is a sequence of instructions and are not necessarily execute sequentially.
+
+    The program counter (PC) is maintained in a CPU register.
+    The process stack also contains a pointer (SP)
+
+To maintain information about all processes the OS keeps a Process Control block (PCB)
+
+> What is a PCB?
+    
+The process control block is a data structure that the OS maintains for every process. It stores:
+    - process state
+    - process number
+    - program counter
+    - registers
+    - memory limits
+    - list of open files
+    - priority
+    - signal mask
+    - CPU scheduling info
+
+A PCB is created and initialized along a process.
+
+Fields of the PCB are updated on state changes:
+    - program counter changes on every single instruction. So the CPU has a dedicated registers to update the PC.
+
+
+
+
+
+
