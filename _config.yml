@@ -5,7 +5,7 @@
 title: Lost in the twilight hall # the website title (if blank, full name will be used instead)
 first_name: Eder
 last_name: Leão Moosmann
-email: eleaomoos@gmail.com
+email: me@mail.ederlm.de
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Eventual writings without any strong commitment 
 footer_text: >
@@ -67,7 +67,6 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: ederlf
 gitlab_username: # your GitLab user name
-twitter_username: ederlfern
 mastodon_username: discuss.systems/@ederlm
 linkedin_username: # your LinkedIn user name
 telegram_username: # your Telegram user name
@@ -205,7 +204,6 @@ plugins:
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-link-attributes
-  - jekyll-twitter-plugin
   - jemoji
 
 # Sitemap settings
